@@ -1,0 +1,90 @@
+@use "variables";
+$rem-base: 16px;
+
+@function calculateRem($size) {
+  @return calc($size / $rem-base) * 1rem;
+}
+
+// UMUMIY HAMMASI UCHUN MEDIA
+@mixin media($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+// MOBILE UCHUN MEDIA
+@mixin first-mobile($px) {
+  @media (min-width: $px) {
+    @content;
+  }
+}
+
+// BUTTONLAR UCHUN
+@mixin button(
+  $padding-y,
+  $padding-x,
+  $text-color,
+  $font-sizes,
+  $background-color,
+  $border-radius
+) {
+  display: inline-block;
+  padding: $padding-y $padding-x;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  color: $text-color;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: $font-sizes;
+  line-height: 140%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+// HEADINGLAR UCHUN
+@mixin heading($heading) {
+  $font-sizes: (
+    h1: 96px,
+    h2: 60px,
+    h3: 48px,
+    h4: 34px,
+    h5: 24px,
+    overline: 10px,
+  );
+
+  $line-heights: (
+    h1: 134.5px,
+    h2: 84px,
+    h3: 67.2px,
+    h4: 47.6px,
+    h5: 33.6px,
+    overline: 140%,
+  );
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+// PARAGRAPH VA MAYDA TEXTLAR UCHUN
+@mixin paragraph($paragraph) {
+  $font-sizes: (
+    body-big: 20px,
+    body-1: 16px,
+    subtitle-2: 14px,
+    body-2: 14px,
+    caption: 12px,
+  );
+  $line-heights: (
+    body-big: 140,
+    body-1: 140%,
+    subtitle-2: 160%,
+    body-2: 160%,
+    caption: 140%,
+  );
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: $black;
+}
