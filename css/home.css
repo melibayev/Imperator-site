@@ -245,3 +245,152 @@ a {
     display: none;
   }
 }
+#home {
+  position: relative;
+  padding-top: 250px;
+  background-color: #ffc000;
+  padding-bottom: 190px;
+}
+#home img {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+
+.home {
+  background-color: #0d0d0d;
+}
+
+.owl-carousel .item {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  height: 400px;
+  position: relative;
+}
+.owl-carousel .item_left h4 {
+  max-width: 588px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+.owl-carousel .item_left p {
+  max-width: 588px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+#home-responsive {
+  display: none;
+  padding-top: 16px;
+}
+
+.home-responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-responsive h4 {
+  max-width: 303px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+}
+.home-responsive p {
+  max-width: 303px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+.home-responsive button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  background-color: transparent;
+  border: none;
+}
+
+#services {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #e5e5e5;
+}
+
+.services h3 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 140%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.services__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.services__cards > div {
+  width: 33.33%;
+}
+.services .services__card {
+  padding: 30px 32px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.services .services__card p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+@media (max-width: 1200px) {
+  .home {
+    display: none;
+  }
+  #home {
+    padding-top: 300px;
+    padding-bottom: 450px;
+  }
+  #home img {
+    width: 38%;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  #home {
+    padding-bottom: 300px;
+  }
+  #home img {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  #home {
+    padding-bottom: 250px;
+  }
+  #home img {
+    width: 60%;
+  }
+  #home-responsive {
+    display: block;
+  }
+  .home-responsive {
+    align-items: flex-start;
+  }
+  .home-responsive h4, .home-responsive p {
+    max-width: 100%;
+  }
+}

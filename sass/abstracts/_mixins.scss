@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables" as var;
 $rem-base: 16px;
 
 @function calculateRem($size) {
@@ -38,6 +38,7 @@ $rem-base: 16px;
   font-weight: 600;
   font-size: $font-sizes;
   line-height: 140%;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
