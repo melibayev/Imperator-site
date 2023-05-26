@@ -410,3 +410,19 @@ footer .footer__container .footer__right {
     gap: 20px;
   }
 }
+
+button {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 1px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 140%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
