@@ -95,7 +95,7 @@ a {
   transition: 0.5s;
 }
 .nav-left .nav-items .nav-item a:hover {
-  color: #F67E7E;
+  color: #ffc000;
 }
 
 .nav-left__img {
@@ -450,6 +450,15 @@ footer .footer__container .footer__mobile__about .bottom {
   line-height: 140%;
   color: #FFFFFF;
 }
+.owl-carousel .item_left button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffc000;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
 
 #home-responsive {
   display: none;
@@ -745,6 +754,7 @@ footer .footer__container .footer__mobile__about .bottom {
 }
 
 #shopping {
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -995,6 +1005,22 @@ footer .footer__container .footer__mobile__about .bottom {
   #discount {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .discount h1 {
+    max-width: 666px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.25px;
+  }
+  .discount span {
+    font-size: 36px;
   }
 }
 @media (max-width: 500px) {

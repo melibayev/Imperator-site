@@ -43,6 +43,15 @@
                 line-height: 140%;
                 color: var.$white-fff;
             }
+            button {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 140%;
+                color: var.$yellow;
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+            }
         }
     }
 }
@@ -366,6 +375,7 @@
 // Shopping Section
 
 #shopping {
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -664,6 +674,22 @@
     #discount {
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+    .discount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            max-width: 666px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            text-align: center;
+            letter-spacing: 0.25px;
+        }
+        span {
+            font-size: 36px;
+        }
     }
 }
 

@@ -28,7 +28,7 @@ function openNavbar() {
 
 
 //   Carousel
-$('#owl-five').owlCarousel({
+$('#owl-one').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
@@ -77,6 +77,22 @@ $('#owl-three').owlCarousel({
     }
 })
 $('#owl-four').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+$('#owl-five').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
