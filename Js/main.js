@@ -28,8 +28,7 @@ function openNavbar() {
 
 
 //   Carousel
-
-$('.owl-carousel').owlCarousel({
+$('#owl-five').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
@@ -45,3 +44,53 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+$('#owl-two').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+$('#owl-three').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+$('#owl-four').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+

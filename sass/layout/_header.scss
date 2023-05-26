@@ -150,7 +150,7 @@ header {
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            background-color: red;
+            background-color: var.$white-fff;
 
             a {
                 @include heading(h5);
