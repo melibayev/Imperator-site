@@ -1,6 +1,9 @@
 @use "../main.scss";
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+
+
 footer {
   background-color: white;
   padding: 46px 0;
@@ -168,6 +171,12 @@ footer {
     }
   }
 }
-button {
-  @include button(10px, 10px, white, 30px, red, 1px);
+
+#filter {
+  padding-top: 150px;
+  .filter__container {
+    .page__link {
+
+    }
+  }
 }
