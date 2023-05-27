@@ -1,1 +1,326 @@
-@import "../main.scss";
+@use "../main.scss";
+@use "../abstracts/variables" as var;
+@import "../abstracts/mixins";
+
+// Home Section
+#home {
+    padding-top: 150px;
+    padding-bottom: 63px;
+    background-color: var.$grey-e5;
+}
+
+.home__title {
+    h2 {
+        margin-bottom: 25px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 140%;
+        text-align: center;
+    }
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+
+    &__left {
+        h3 {
+            margin-bottom: 24px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 140%;
+        }
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 170%;
+        }
+    }
+}
+
+
+// Services
+#services {
+    padding-top: 70px;
+    padding-bottom: 220px;
+    background-color: var.$grey-e5;
+}
+
+.services-responsive {
+    display: none;
+}
+
+.services {
+    h3 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 140%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+
+        & > div {
+            width: 33.33%;
+        }
+    }
+
+    .services__card {
+        padding: 30px 32px;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        flex-direction: column;
+        background-color: var.$white-fff;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.09);
+        }
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+        }
+        border-radius: 12px;
+    }
+}
+
+// Social Media Section
+#social {
+    padding-top: 50px;
+    padding-bottom: 55px;
+    background: radial-gradient(100% 1071.07% at 0% 0%, #0F0D2B 0%, #0C0926 100%)
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    &__left {
+        margin-top: -220px;
+    }
+    &__right {
+        h1 {
+            margin-bottom: 24px;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 140%;
+            letter-spacing: 0.25px;
+            font-feature-settings: 'pnum' on, 'lnum' on;            
+            color: var.$white-fff;
+        }
+        p {
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0.44px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: var.$white-fff;
+            opacity: 0.7;
+        }
+        &__btns {
+            display: flex;
+            gap: 30px;
+            button {
+                border: none;
+                cursor: pointer;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+
+// Address Section
+
+#address {
+    padding-top: 150px;
+    padding-bottom: 62px;
+    background-color: var.$grey-e5;
+}
+
+.address {
+    display: flex;
+    gap: 50px;
+    &__right {
+        h1 {
+            margin-bottom: 65px;
+            font-weight: 900;
+            font-size: 46px;
+            line-height: 64px;
+        }
+        .address__info {
+            display: flex;
+            gap: 120px;
+
+            h4 {
+                margin-bottom: 8px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 32px;
+            }
+            p {
+                margin-bottom: 36px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    // Services Section
+    .services {
+        &__cards {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    // Address Section
+
+    .address {
+        flex-direction: column;
+        align-items: center;
+        & > div {
+            width: 100%;
+        }
+        &__left {
+            iframe {
+                width: 100%;
+            }
+        }
+        &__right {
+            h1 {
+                text-align: center;
+            }
+            .address__info {
+                gap: 30px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        flex-direction: column-reverse;
+        gap: 15px;
+        &__left {
+            padding: 0 8px;
+        }
+        &__right {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    // Social Section
+    .social {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+     // Services Section
+     .services {
+        display: none;
+    }
+
+    .services-responsive {
+        display: block;
+
+        h3 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 140%;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .owl-theme .owl-nav.disabled+.owl-dots {
+            position: relative;
+            bottom: -20px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+            border: 1px solid black !important;
+            border-radius: 50%;   
+            margin-left: 5px;     
+            margin-right: 5px;     
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            margin: 6px 7px;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span  {
+            background: black;
+        }
+        
+        .services__card {
+            padding: 40px 0px;
+            width: 100%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            flex-direction: column;
+            background-color: var.$white-fff;
+            cursor: pointer;
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+            }
+            border-radius: 12px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    // Social Section
+    .social {
+        gap: 20px;
+        &__left {
+            img {
+                width: 230px;
+            }
+        }
+        &__right {
+            &__btns {
+                flex-direction: column;
+                width: 180px;
+                gap: 20px;
+            }
+        }
+    }
+
+    // address section
+    #address {
+        padding-top: 40px;
+    }
+    .address {
+        &__right {
+                h1 {
+                    text-align: left;
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+        }
+    }
+}
