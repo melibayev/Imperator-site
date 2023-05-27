@@ -1,1 +1,183 @@
-@import "../main.scss";
+@use "../main.scss";
+@use "../abstracts/variables" as var;
+@import "../abstracts/mixins";
+
+#oplata {
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+.oplata__title {
+    h3 {
+        margin-bottom: 80px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 140%;
+        text-align: center;
+    }
+}
+
+.oplata {
+    display: flex;
+    gap: 100px;
+    & > div {
+        width: 50%;
+    }
+    &__left {
+        &__info {
+            padding: 16px;
+            margin-bottom: 60px;
+            background-color: var.$yellow;
+            &__top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 140%;
+                }
+            }
+            &__bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 120px;
+                p {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 140%;
+                }
+            }
+        }
+        &__option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+    &__right {
+        input {
+            display: block;
+            width: 94%;
+            padding: 18px 16px;
+            margin-bottom: 24px;
+            outline: none;
+            border: none;
+            background-color: var.$grey-f2;
+        }
+        input::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+        }
+        button {
+            width: 100%;
+            @include button(16px, 14px, var.$black-0d, 14px, var.$yellow, 0);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
+}
+
+#order {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.order {
+    h3 {
+        margin-bottom: 32px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 140%;
+        text-align: center;
+    }
+    &__card {
+        margin-bottom: 24px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        column-gap: 32px;
+        background-color: var.$white-fff;
+        border-radius: 22px;
+        &__left {
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__right {
+            position: relative;
+            padding: 25px 30px 32px 0;
+
+            img {
+                position: absolute;
+                top: 25px;
+                right: 5%;
+                cursor: pointer;
+            }
+            h2 {
+                margin-bottom: 70px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 140%;
+            }
+            & > p {
+                margin-bottom: 42px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 160%;
+            }
+            &__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .info__left {
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    p {
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                    }
+                    span {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+
+                .trash {
+                    display: none;
+                }
+                .control_number {
+                    display: flex;
+                    align-items: center;
+                    .info__right__item {
+                        padding: 6px 43px;
+                        background-color: var.$grey-f2;
+                    }
+                    button {
+                        padding: 7.5px 14px;
+                        cursor: pointer;
+                        border: none;
+                        color: var.$white-fff;
+                        background-color: var.$yellow;
+                    }
+                }
+            }
+        }
+    }
+    &__price {
+        display: none;
+    }
+}
