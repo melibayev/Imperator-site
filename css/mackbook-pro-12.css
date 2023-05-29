@@ -50,7 +50,7 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #fafafa;
+  background-color: transparent;
   z-index: 1000;
   transition: 0.2s;
 }
@@ -89,11 +89,11 @@ a {
   margin-right: 40px;
 }
 .nav-left .nav-items .nav-item a {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
   transition: 0.5s;
+  color: #0d0d0d;
 }
 .nav-left .nav-items .nav-item a:hover {
   color: #ffc000;
@@ -134,6 +134,9 @@ a {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.nav-right a button:hover {
+  background-color: #ffc000;
 }
 .nav-right a button.register-btn {
   background-color: #ffc000;
@@ -412,6 +415,17 @@ footer .footer__container .footer__mobile__about .bottom {
   }
 }
 
+.container_for_home {
+  max-width: 1646px !important;
+  margin: 0 auto !important;
+  padding: 0 1.25rem !important;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
 #home {
   padding-top: 150px;
   padding-bottom: 70px;
@@ -429,16 +443,22 @@ footer .footer__container .footer__mobile__about .bottom {
 .home {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   row-gap: 24px;
 }
 .home__card {
+  position: relative;
   width: 100%;
+  height: 500px;
+  overflow: hidden;
   cursor: pointer;
 }
 .home__card img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .home__card h4 {
   margin-top: 24px;
@@ -448,9 +468,50 @@ footer .footer__container .footer__mobile__about .bottom {
   text-align: center;
 }
 
+.hover_main {
+  transition: 0.5s;
+  width: 100%;
+}
+
+.home__card:hover .hover_main {
+  opacity: 0;
+}
+
+.hover_img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.home__card:hover .hover_img {
+  opacity: 1;
+}
+
 @media (max-width: 1000px) {
+  nav {
+    margin-top: 0 !important;
+    background-color: #FAFAFA !important;
+  }
+  #video {
+    display: none;
+  }
+  #home {
+    padding-top: 100px;
+  }
   .home {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .home__card {
+    height: 200px;
+  }
+  .hover_img {
+    display: none;
+  }
+  .home__card:hover .hover_main {
+    opacity: 1;
   }
 }
 @media (max-width: 600px) {

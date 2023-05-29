@@ -61,8 +61,11 @@ header {
             margin-right: 40px;
             .nav-item {
               a{
-                @include paragraph(body-2);
-                
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 140%;
+                transition: 0.5s;
+                color: var.$black-0d;
                 transition: 0.5s;
               }
       
@@ -95,6 +98,9 @@ header {
         a {
             button {
                 @include button(4px, 8px, var.$black-0d, 1rem, var.$black-opacity-5, 4px);
+                &:hover {
+                  background-color: var.$yellow;
+                }
             }
             button.register-btn {
                 background-color: var.$yellow;
@@ -210,7 +216,6 @@ header {
             display: none;
         }
     }
-
   }
 
 

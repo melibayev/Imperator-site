@@ -1,6 +1,17 @@
-@use "../main.scss";
+@use "../navbar-fixed.scss";
 @use "../abstracts/variables" as var;
 @import "../abstracts/mixins";
+
+.container_for_home {
+    max-width: 1646px !important;
+    margin: 0 auto !important;
+    padding: 0 1.25rem !important;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
 
 #home {
     padding-top: 150px;
@@ -21,13 +32,18 @@
 .home {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 30px;
+    column-gap: 10px;
     row-gap: 24px;
     &__card {
+        position: relative;
         width: 100%;
+        height: 500px;
+        overflow: hidden;
         cursor: pointer;
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         h4 {
             margin-top: 24px;
@@ -36,19 +52,58 @@
             line-height: 130%;
             text-align: center;
         }
-    }
+}
+}
+
+.hover_main {
+    transition: 0.5s;
+    width: 100%;
+}
+.home__card:hover .hover_main {
+    opacity: 0;
+}
+.hover_img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.home__card:hover .hover_img {
+    opacity: 1;       
 }
 
 
 @media (max-width: 1000px) {
+    nav {
+        margin-top: 0 !important;
+        background-color: #FAFAFA !important;
+    }
+    #video {
+        display: none;
+    }
+    #home {
+        padding-top: 100px;
+    }
     .home {
         grid-template-columns: repeat(3, 1fr);
+        &__card {
+            height: 200px;
+        }
+    }
+    .hover_img {
+        display: none;
+    }
+    .home__card:hover .hover_main{
+        opacity: 1;
     }
 }
 
 @media (max-width: 600px) {
     .home {
         grid-template-columns: 1fr 1fr;
+        
         &__card {
             h4 {
                 font-size: 16px;
