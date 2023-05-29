@@ -45,6 +45,7 @@ header .nav-top__btns button.active {
 
 nav {
   position: fixed;
+  margin-top: 42px;
   top: 0;
   left: 0;
   right: 0;
@@ -408,5 +409,232 @@ footer .footer__container .footer__right {
   footer .footer__container .footer__mobile__about .bottom {
     display: flex;
     gap: 20px;
+  }
+}
+
+#sootrudnichestvo {
+  padding: 244px 0 80px;
+  background-color: #F2F2F2;
+}
+#sootrudnichestvo .sot__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+#sootrudnichestvo .sot__container .sot__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sootrudnichestvo .sot__container .sot__left .left__heading h1 {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 64px;
+  color: #000000;
+  max-width: 550px;
+}
+#sootrudnichestvo .sot__container .sot__left .left__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#sootrudnichestvo .sot__container .sot__left .left__phone .phone,
+#sootrudnichestvo .sot__container .sot__left .left__phone .address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#sootrudnichestvo .sot__container .sot__left .left__phone .phone h4,
+#sootrudnichestvo .sot__container .sot__left .left__phone .address h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 34px;
+  color: #000000;
+}
+#sootrudnichestvo .sot__container .sot__left .left__phone .phone a,
+#sootrudnichestvo .sot__container .sot__left .left__phone .address a {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+  transition: 0.3s;
+}
+#sootrudnichestvo .sot__container .sot__left .left__phone .phone a:hover,
+#sootrudnichestvo .sot__container .sot__left .left__phone .address a:hover {
+  color: #ffc000;
+}
+#sootrudnichestvo .sot__container .sot__left .left__phone .email {
+  display: none;
+}
+#sootrudnichestvo .sot__container .sot__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#sootrudnichestvo .sot__container .sot__right input,
+#sootrudnichestvo .sot__container .sot__right textarea {
+  border: 1px solid #afafaf;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "Inter", sans-serif;
+  color: #000000;
+  resize: none;
+}
+#sootrudnichestvo .sot__container .sot__right input::-moz-placeholder, #sootrudnichestvo .sot__container .sot__right textarea::-moz-placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+}
+#sootrudnichestvo .sot__container .sot__right input::placeholder,
+#sootrudnichestvo .sot__container .sot__right textarea::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+}
+#sootrudnichestvo .sot__container .sot__right input:focus,
+#sootrudnichestvo .sot__container .sot__right textarea:focus {
+  outline: 1px solid #ffc000;
+}
+#sootrudnichestvo .sot__container .sot__right button {
+  max-width: 260px;
+  background: #ffc000;
+  border-radius: 6px;
+  padding: 12px 0px;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  color: #0d0d0d;
+  transition: 0.2s;
+  cursor: pointer;
+}
+#sootrudnichestvo .sot__container .sot__right button:hover {
+  background: #dca500;
+}
+@media only screen and (max-width: 950px) {
+  #sootrudnichestvo .sot__container .sot__left .left__heading h1 {
+    font-size: 40px;
+    line-height: 140%;
+    max-width: 100%;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone {
+    gap: 20px;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .phone h4,
+  #sootrudnichestvo .sot__container .sot__left .left__phone .address h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .phone a,
+  #sootrudnichestvo .sot__container .sot__left .left__phone .address a {
+    font-size: 10px;
+    line-height: 25px;
+  }
+  #sootrudnichestvo .sot__container .sot__right input,
+  #sootrudnichestvo .sot__container .sot__right textarea {
+    padding: 10px 15px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  #sootrudnichestvo .sot__container .sot__right input::-moz-placeholder, #sootrudnichestvo .sot__container .sot__right textarea::-moz-placeholder {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  #sootrudnichestvo .sot__container .sot__right input::placeholder,
+  #sootrudnichestvo .sot__container .sot__right textarea::placeholder {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  #sootrudnichestvo .sot__container .sot__right button {
+    font-size: 15px;
+    padding: 10px 0;
+    line-height: 26.6px;
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #sootrudnichestvo {
+    padding: 150px 0 80px;
+  }
+  #sootrudnichestvo .sot__container {
+    flex-direction: column;
+    gap: 70px;
+  }
+  #sootrudnichestvo .sot__container .sot__left {
+    width: 100%;
+    gap: 30px;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__heading h1 {
+    text-align: center;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .email h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .email a {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 25px;
+    color: #000000;
+    transition: 0.3s;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .email a:hover {
+    color: #ffc000;
+  }
+  #sootrudnichestvo .sot__container .sot__right {
+    width: 100%;
+  }
+  #sootrudnichestvo .sot__container .sot__right button {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 625px) {
+  #sootrudnichestvo .sot__container .sot__left .left__phone .address a {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #sootrudnichestvo .sot__container {
+    gap: 30px;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__heading h1 {
+    font-size: 35px;
+    line-height: 130%;
+    text-align: left;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .phone,
+  #sootrudnichestvo .sot__container .sot__left .left__phone .address,
+  #sootrudnichestvo .sot__container .sot__left .left__phone .email {
+    text-align: left;
+  }
+  #sootrudnichestvo .sot__container .sot__left .left__phone .phone a,
+  #sootrudnichestvo .sot__container .sot__left .left__phone .address a,
+  #sootrudnichestvo .sot__container .sot__left .left__phone .email a {
+    max-width: 100%;
   }
 }

@@ -45,6 +45,7 @@ header .nav-top__btns button.active {
 
 nav {
   position: fixed;
+  margin-top: 42px;
   top: 0;
   left: 0;
   right: 0;
@@ -426,6 +427,9 @@ footer .footer__container .footer__right {
 
 .home__left {
   cursor: pointer;
+}
+.home__left__main__img {
+  margin-bottom: 20px;
 }
 .home__left__main__img img {
   width: 100%;

@@ -46,6 +46,7 @@ header .nav-top__btns button.active {
 
 nav {
   position: fixed;
+  margin-top: 42px;
   top: 0;
   left: 0;
   right: 0;

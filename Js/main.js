@@ -141,5 +141,79 @@ $('#owl-seven').owlCarousel({
     }
 })
 
+// increase/ decrease button
+const counterElement = document.getElementById('counter');
+    const plusButton = document.getElementById('plusButton');
+    const minusButton = document.getElementById('minusButton');
 
+    // Initialize the counter
+    let counter = 1;
+    counterElement.textContent = counter;
+
+    // Add click event listeners to the buttons
+    plusButton.addEventListener('click', () => {
+      counter++;
+      counterElement.textContent = counter;
+      updateSumDisplay();
+    });
+
+    minusButton.addEventListener('click', () => {
+      counter--;
+      if (counter < 1) {
+        counter = 1
+      } 
+      counterElement.textContent = counter;
+      updateSumDisplay();
+});
+
+const counterElement2 = document.getElementById('counter2');
+const plusButton2 = document.getElementById('plusButton2');
+const minusButton2 = document.getElementById('minusButton2');
+
+// Initialize the counter
+let counter2 = 1;
+counterElement2.textContent = counter2;
+
+// Add click event listeners to the buttons
+plusButton2.addEventListener('click', () => {
+    counter2++;
+    counterElement2.textContent = counter2;
+    updateSumDisplay();
+});
+
+minusButton2.addEventListener('click', () => {
+    counter2--;
+    if (counter2 < 1) {
+        counter2 = 1
+      } 
+    counterElement2.textContent = counter2;
+    updateSumDisplay();
+});
+
+
+// Finding Sum of Products
+const numberElements = document.querySelectorAll('.number');
+    const sumElement = document.getElementById('sum');
+
+// Calculate the sum of the multiplied numbers
+function calculateSum() {
+    let sum = 0;
+    numberElements.forEach((numberElement) => {
+        const number = parseInt(numberElement.textContent);
+        const multipliedNumber = number * 25000;
+        sum += multipliedNumber;
+    });
+    return sum;
+    }
+
+    function formatNumberWithDots(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+function updateSumDisplay() {
+    const sum = calculateSum();
+    const formattedSum = formatNumberWithDots(sum);
+    sumElement.textContent = formattedSum + " Сум";
+}
+    updateSumDisplay();
 

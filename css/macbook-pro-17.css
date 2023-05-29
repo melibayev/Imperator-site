@@ -45,6 +45,7 @@ header .nav-top__btns button.active {
 
 nav {
   position: fixed;
+  margin-top: 42px;
   top: 0;
   left: 0;
   right: 0;
@@ -409,4 +410,192 @@ footer .footer__container .footer__right {
     display: flex;
     gap: 20px;
   }
+}
+
+#oplata {
+  padding-top: 150px;
+  padding-bottom: 20px;
+}
+
+.oplata__title h3 {
+  margin-bottom: 80px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.oplata {
+  display: flex;
+  gap: 100px;
+}
+.oplata > div {
+  width: 50%;
+}
+.oplata__left__info {
+  padding: 16px;
+  margin-bottom: 60px;
+  background-color: #ffc000;
+}
+.oplata__left__info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.oplata__left__info__top p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+}
+.oplata__left__info__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+.oplata__left__info__bottom p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+}
+.oplata__left__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.oplata__left__option img {
+  cursor: pointer;
+}
+.oplata__right input {
+  display: block;
+  width: 94%;
+  padding: 18px 16px;
+  margin-bottom: 24px;
+  outline: none;
+  border: none;
+  background-color: #F2F2F2;
+}
+.oplata__right input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.oplata__right input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.oplata__right button {
+  width: 100%;
+  display: inline-block;
+  padding: 16px 14px;
+  border-radius: 0;
+  background-color: #ffc000;
+  color: #0d0d0d;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+#order {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.order h3 {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 140%;
+  text-align: center;
+}
+.order__card {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  background-color: #FFFFFF;
+  border-radius: 22px;
+}
+.order__card__left {
+  height: 100%;
+}
+.order__card__left img {
+  width: 100%;
+  height: 100%;
+}
+.order__card__right {
+  position: relative;
+  padding: 25px 30px 32px 0;
+}
+.order__card__right img {
+  position: absolute;
+  top: 25px;
+  right: 5%;
+  cursor: pointer;
+}
+.order__card__right h2 {
+  margin-bottom: 70px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+}
+.order__card__right > p {
+  margin-bottom: 42px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+}
+.order__card__right__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order__card__right__info .info__left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.order__card__right__info .info__left p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+.order__card__right__info .info__left span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.order__card__right__info .trash {
+  display: none;
+}
+.order__card__right__info .control_number {
+  display: flex;
+  align-items: center;
+}
+.order__card__right__info .control_number .info__right__item {
+  padding: 6px 43px;
+  background-color: #F2F2F2;
+}
+.order__card__right__info .control_number button {
+  padding: 7.5px 14px;
+  cursor: pointer;
+  border: none;
+  color: #FFFFFF;
+  background-color: #ffc000;
+}
+.order__price {
+  display: none;
 }
