@@ -1,1 +1,57 @@
-@import "../main.scss";
+@use "../main.scss";
+@use "../abstracts/variables" as var;
+@import "../abstracts/mixins";
+
+#home {
+    padding-top: 120px;
+    padding-bottom: 64px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    &__left {
+        h1 {
+            margin-bottom: 16px;
+            font-weight: 900;
+            font-size: 46px;
+            line-height: 64px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+        p {
+            margin-bottom: 16px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
+        }
+        button {
+            @include button(16px, 14px, var.$black-0d, 14px, var.$yellow, 8px);
+            width: 40%;
+        }
+    }
+    &__right {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #home {
+        padding-bottom: 32px;
+    }
+    .home {
+        flex-direction: column-reverse;
+        gap: 40px;
+        &__left {
+            h1 {
+                font-size: 34px;
+                line-height: 140%;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
