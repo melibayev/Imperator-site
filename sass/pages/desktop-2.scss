@@ -1,1 +1,83 @@
-@import "../main.scss";
+@use "../main.scss";
+@use "../abstracts/variables" as var;
+@import "../abstracts/mixins";
+
+#home {
+    padding-top: 150px;
+    padding-bottom: 64px;
+}
+
+.home__title {
+    h3 {
+        margin-bottom: 64px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 140%;
+        text-align: center;
+    }
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    & > div {
+        width: 50%;
+    }
+    &__left {
+        img {
+            width: 100%;
+        }
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    input {
+        padding: 16px 24px;
+        display: block;
+        width: calc(100% - 50px);
+        margin-bottom: 16px;
+        outline: none;
+        border: 1px solid #DBDEE7;
+        border-radius: 6px;
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .passwordd {
+        width: 100%;
+        position: relative;
+        i {
+            position: absolute;
+            top: 55%;
+            right: 2%;
+            cursor: pointer;
+        }
+    }
+    button {
+        width: 50%;
+        @include button(16px, 14px, var.$black-0d, 14px, var.$yellow, 8px);
+    }
+}
+
+
+@media (max-width: 800px) {
+    #home {
+        padding-bottom: 20px;
+    }
+    .home {
+        flex-direction: column;
+        & > div {
+            width: 100%;
+        }
+        button {
+            width: 100%;
+        }
+    }
+}

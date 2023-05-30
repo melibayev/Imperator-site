@@ -19,6 +19,7 @@
 }
 
 .owl-carousel {
+    z-index: 0 !important;
     .item { 
         display: flex;
         gap: 50px;

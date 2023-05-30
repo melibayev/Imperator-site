@@ -428,6 +428,9 @@ footer .footer__container .footer__right {
   background-color: #0d0d0d;
 }
 
+.owl-carousel {
+  z-index: 0 !important;
+}
 .owl-carousel .item {
   display: flex;
   gap: 50px;

@@ -417,6 +417,12 @@ body {
   background-color: #f4f4f4;
 }
 
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
 #filter {
   padding-top: 130px;
   padding-bottom: 65px;
@@ -428,6 +434,11 @@ body {
   color: #000000;
   font-weight: 600;
 }
+@media only screen and (max-width: 620px) {
+  #filter .filter__container .page__link {
+    display: none;
+  }
+}
 #filter .filter__container .filter__main {
   margin-top: 40px;
   width: 100%;
@@ -435,17 +446,6 @@ body {
   justify-content: space-between;
   gap: 22px;
   /* Accordion styles */
-}
-#filter .filter__container .filter__main input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-#filter .filter__container .filter__main .row {
-  display: flex;
-}
-#filter .filter__container .filter__main .row .col {
-  flex: 1;
 }
 #filter .filter__container .filter__main .tabs {
   width: 270px;
@@ -523,7 +523,7 @@ body {
 #filter .filter__container .filter__main .tab-content .category .ap-tab-item a,
 #filter .filter__container .filter__main .tab-content .gender .ap-tab-item a {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.4px;
   color: #000000;
@@ -663,15 +663,15 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 2px;
   padding: 10px 16px;
-  background: #fff;
+  background: #ffffff;
   cursor: pointer;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 140%;
+  font-size: 18px;
+  line-height: 156%;
   letter-spacing: 0.15px;
   color: #000000;
+  transition: 0.3s;
 }
 #filter .filter__container .filter__main .tab-close:hover {
   background: rgb(229, 229, 229);
@@ -691,45 +691,150 @@ body {
   justify-content: space-between;
   gap: 22px;
 }
-#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .tab__img {
-  width: 100%;
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 13px;
+  gap: 10px;
+  transition: 0.4s;
+  cursor: pointer;
 }
-#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item p {
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__img {
+  overflow: hidden;
+  border-radius: 13px;
+}
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__img img {
+  transition: 0.4s;
+  border-radius: 13px;
+  width: 100%;
+  height: 100%;
+}
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__content {
+  padding: 0 10px;
+}
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__content p {
   font-weight: 600;
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   color: #000000;
-  max-width: 245px;
-  margin-top: 8px;
-  margin-bottom: 13px;
+  max-width: 250px;
 }
-#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .tab__bottom {
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__bottom {
+  padding: 0 10px 10px 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
-#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .tab__bottom span {
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__bottom span {
   font-weight: 700;
   font-size: 10px;
   line-height: 140%;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  font-feature-settings: "pnum" on, "lnum" on;
   color: #000000;
 }
-#filter .filter__container .filter__main .ap-tab-container .active-tab {
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item:hover {
+  box-shadow: 0 0 10px 1px #e6ac00;
+}
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item:hover .item__img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item:hover .item__img img {
+  transform: scale(1.1);
+}
+#filter .filter__container .filter__main .active-tab {
   display: flex !important;
   flex-wrap: wrap !important;
-  justify-content: space-evenly;
-  gap: 22px !important;
+  gap: 22px;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content {
+    justify-content: space-evenly;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item {
+    width: 220px;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__img {
+    transition: 0.3s;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__img img {
+    width: 220px;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__content p {
+    font-size: 13px;
+    max-width: 100%;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__bottom span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 815px) {
   #filter .filter__container .filter__main {
     flex-direction: column;
   }
-  #filter .filter__container .filter__main .ap-tab-container .active-tab {
-    gap: 40px !important;
+  #filter .filter__container .filter__main .filter__menu {
+    position: relative;
+    z-index: 100;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs {
+    position: absolute;
+    right: 0;
+    top: -57px;
+    width: 220px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .heading {
+    padding: 10px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .heading h3 {
+    font-size: 25px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-label {
+    font-size: 18px;
+    padding: 10px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-close {
+    font-size: 15px;
+    gap: 2px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .price {
+    padding: 10px 20px !important;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .price .from, #filter .filter__container .filter__main .filter__menu .tabs .tab-content .price .to {
+    gap: 5px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .price .from div, #filter .filter__container .filter__main .filter__menu .tabs .tab-content .price .to div {
+    width: 80px !important;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .color {
+    padding: 10px 20px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .color h4 {
+    font-size: 18px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .color .colors {
+    margin-top: 5px;
+  }
+  #filter .filter__container .filter__main .filter__menu .tabs .tab-content .ap-tab-item {
+    padding: 10px 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item {
+    width: 180px;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__img img {
+    width: 100%;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__content p {
+    font-size: 11px;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__bottom span {
+    font-size: 11px;
+  }
+  #filter .filter__container .filter__main .ap-tab-container .ap-tab-content .tab__item .item__bottom img {
+    width: 85px;
   }
 }
