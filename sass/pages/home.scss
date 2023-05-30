@@ -604,7 +604,9 @@ video {
         flex-direction: column;
         gap: 32px;
     }
-
+    #video {
+        display: none;
+    }
     .video__description {
         top: 40%;
         h3 {
