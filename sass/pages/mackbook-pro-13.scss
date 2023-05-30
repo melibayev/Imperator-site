@@ -116,6 +116,10 @@
         }
         button:last-child {
             @include button(10px, 86px, var.$black-0d, 14px, var.$black-opacity-5, 0);
+            transition: 0.4s;
+            &:hover {
+                box-shadow: inset 200px 0 70px var.$yellow, inset -200px 0 70px var.$yellow;
+            }
         }
     }
     h3 {

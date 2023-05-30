@@ -1,3 +1,48 @@
+var button = document.querySelector('.korzinka');
+button.style.animationPlayState = 'running';
+
+setInterval(function() {
+  button.style.animationPlayState = 'paused';
+  setTimeout(function() {
+    button.style.animationPlayState = 'running';
+  }, 5000);
+}, 5000);
+
+
+// Loader
+
+window.addEventListener('DOMContentLoaded', () =>{
+
+    const loader = document.querySelector('.loader')
+    
+    setTimeout(() =>{
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none'
+        }, 500)
+    }, 2000)
+    
+    })
+
+
+// function stopRotation() {
+//   isActive = false;
+//   button.style.transform = 'rotate(360deg)'; // Reset to the starting position
+// }
+
+// function startRotation() {
+//   if (!isActive) {
+//     isActive = true;
+//     button.style.animation = 'move 0.3s infinite';
+//     rotationTimeout = setTimeout(function() {
+//       stopRotation();
+//     }, 5000); // Stop after 5 seconds
+//   }
+// }
+
+
+
+
 // BACKTOP function
 window.addEventListener("scroll", function () {
     toggleBacktop();
@@ -12,7 +57,6 @@ function toggleBacktop() {
         backtop.style.bottom = "-50px";
     }
 }
-
 
 window.addEventListener("scroll", function () {
     togglenav();
@@ -242,5 +286,4 @@ togglePassword.addEventListener("click", function () {
     password.setAttribute("type", type);
     this.classList.toggle("bi-eye");
 });
-
 

@@ -107,9 +107,13 @@ header {
             }
             button.korzinka {
                 background-color: transparent;
+                animation: move .5s infinite;
+                animation-direction: alternate-reverse;
+                animation-delay: 3s;
             }
         }
     } 
+
     
   
     .close {
@@ -142,6 +146,21 @@ header {
   }
     
   
+  @keyframes move {
+    0%{
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50%{
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
   @media (max-width: 1050px){
     .nav-left {
         .nav-items {
@@ -210,6 +229,9 @@ header {
         }
     }
   }
+
+
+
 
   @media (max-width: 600px) {
     .nav-right {
