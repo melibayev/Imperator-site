@@ -1,1 +1,235 @@
 @import "../main.scss";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+#sootrudnichestvo {
+  padding: 244px 0 80px;
+  background-color: $grey-f2;
+  .sot__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    .sot__left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .left__heading {
+        h1 {
+          font-weight: 900;
+          font-size: 46px;
+          line-height: 64px;
+          color: #000000;
+          max-width: 550px;
+        }
+      }
+      .left__phone {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .phone,
+        .address {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          h4 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 34px;
+            color: #000000;
+          }
+          a {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            color: #000000;
+            transition: 0.3s;
+            &:hover {
+              color: $yellow;
+            }
+          }
+        }
+        .email {
+          display: none;
+        }
+      }
+    }
+    .sot__right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      input,
+      textarea {
+        border: 1px solid #afafaf;
+        border-radius: 6px;
+        padding: 12px 24px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        font-family: "Inter", sans-serif;
+        color: #000000;
+        resize: none;
+        &::placeholder {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 32px;
+          color: #000000;
+        }
+        &:focus {
+          outline: 1px solid $yellow;
+        }
+      }
+      button {
+        max-width: 260px;
+        background: #ffc000;
+        border-radius: 6px;
+        padding: 12px 0px;
+        border: none;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        color: #0d0d0d;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+          background: #dca500;
+        }
+      }
+    }
+  }
+  @include media(950px) {
+    .sot__container {
+      .sot__left {
+        .left__heading {
+          h1 {
+            font-size: 40px;
+            line-height: 140%;
+            max-width: 100%;
+          }
+        }
+        .left__phone {
+          gap: 20px;
+          .phone,
+          .address {
+            h4 {
+              font-size: 18px;
+              line-height: 25px;
+            }
+            a {
+              font-size: 10px;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+      .sot__right {
+        input,
+        textarea {
+          padding: 10px 15px;
+          font-size: 15px;
+          line-height: 25px;
+          &::placeholder {
+            font-size: 15px;
+            line-height: 25px;
+          }
+        }
+        button {
+          font-size: 15px;
+          padding: 10px 0;
+          line-height: 26.6px;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  @include media(750px) {
+    padding: 150px 0 80px;
+    .sot__container {
+      flex-direction: column;
+      gap: 70px;
+      .sot__left {
+        width: 100%;
+        gap: 30px;
+        .left__heading {
+          h1 {
+            text-align: center;
+          }
+        }
+        .left__phone {
+          .email {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            h4 {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 25px;
+              color: #000000;
+            }
+            a {
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 25px;
+              color: #000000;
+              transition: 0.3s;
+              &:hover {
+                color: $yellow;
+              }
+            }
+          }
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: center;
+        }
+      }
+      .sot__right {
+        width: 100%;
+        button {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  @include media(625px) {
+    .sot__container {
+      .sot__left {
+        .left__phone {
+          .address {
+            a {
+              max-width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(500px) {
+    .sot__container {
+      gap: 30px;
+      .sot__left {
+        .left__heading {
+          h1 {
+            font-size: 35px;
+            line-height: 130%;
+            text-align: left;
+          }
+        }
+        .left__phone {
+          justify-content: start;
+          flex-wrap: wrap;
+          gap: 35px;
+          .phone,
+          .address,
+          .email {
+            text-align: left;
+            a {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
