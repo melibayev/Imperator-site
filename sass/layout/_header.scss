@@ -1,246 +1,243 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins";
 header {
-    .nav-top {
-        background-color: var.$black-13;
-        &__btns {
-            button{
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 700;
-                @include button(0.81rem, 5px, var.$grey-fa, 0.75rem, transparent, none);
-            }
-            button.active {
-                color: rgba(255, 255, 255, 0.3);
-            }
-        }
-    }
-  }
-    nav {
-      position: fixed;
-      margin-top: 42px;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background-color: var.$grey-fa;
-      z-index: 1000;
-      transition: 0.2s;
-    }
-    
-    ul {
-      list-style: none;   
-    } 
-  
-    a {
-      text-decoration: none;
-    }
-  
-    .navbar {
-      padding: 1.31rem 0;
-      display: flex;    
-      justify-content: space-between;
-      align-items: center;
-      transition: 0.6s;
-    }
-    
-    #navbar-responsive {
-      transition: 0.8s;
-    }
-    
-    .nav-left {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 98px;
-        .nav-items {
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            gap: 40px;
-            margin-right: 40px;
-            .nav-item {
-              a{
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 140%;
-                transition: 0.5s;
-                color: var.$black-0d;
-                transition: 0.5s;
-              }
-      
-              a:hover {
-                color: $yellow;
-              }
-            }
-          }
-    }
-
-    .nav-left__img {
-        display: flex;
-        align-items: center;
-        a {
-            h1 {
-                @include heading(h3);
-                font-size: 24px;
-            }
-        }
-        & > img {
-            display: none;
-        }
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 15px;
-        a {
-            button {
-                @include button(4px, 8px, var.$black-0d, 1rem, var.$black-opacity-5, 4px);
-                &:hover {
-                  background-color: var.$yellow;
-                }
-            }
-            button.register-btn {
-                background-color: var.$yellow;
-            }
-            button.korzinka {
-                background-color: transparent;
-                animation: move .5s infinite;
-                animation-direction: alternate-reverse;
-                animation-delay: 3s;
-            }
-        }
-    } 
-
-    
-  
-    .close {
-      display: none;
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      background-color: transparent;
-      border: none;
-      border-radius: none;
-  
-      & img {
-        width: 19px;
+  .nav-top {
+    background-color: var.$black-13;
+    &__btns {
+      button {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        @include button(0.81rem, 5px, var.$grey-fa, 0.75rem, transparent, none);
+      }
+      button.active {
+        color: rgba(255, 255, 255, 0.3);
       }
     }
-  
-    .registration-btns {
-        display: none;
-    }
+  }
+}
+nav {
+  position: fixed;
+  margin-top: 42px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var.$grey-fa;
+  z-index: 1000;
+  transition: 0.2s;
+}
 
-  .hamburger {
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 1.31rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+}
+
+#navbar-responsive {
+  transition: 0.8s;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 98px;
+  .nav-items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 40px;
+
+    .nav-item {
+      a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        transition: 0.5s;
+        color: var.$black-0d;
+        transition: 0.5s;
+      }
+
+      a:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.nav-left__img {
+  display: flex;
+  align-items: center;
+  a {
+    h1 {
+      @include heading(h3);
+      font-size: 24px;
+    }
+  }
+  & > img {
     display: none;
-    text-align: end;
-    border: none;
-    background-color: transparent;
-  
-    & img {
-      width: 23px;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  a {
+    button {
+      @include button(4px, 8px, var.$black-0d, 1rem, var.$black-opacity-5, 4px);
+      &:hover {
+        background-color: var.$yellow;
+      }
+    }
+    button.register-btn {
+      background-color: var.$yellow;
+    }
+    button.korzinka {
+      background-color: transparent;
+      // animation: move 5s infinite alternate-reverse;
     }
   }
-    
-  
-  @keyframes move {
-    0%{
-      transform: rotate(0);
-    }
-    25% {
-      transform: rotate(-10deg);
-    }
-    50%{
-      transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+}
+
+.close {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+
+  & img {
+    width: 19px;
   }
+}
 
-  @media (max-width: 1050px){
-    .nav-left {
-        .nav-items {
-            padding-top: 80px;
-            padding-bottom: 20px;
-            position: fixed;
-            align-items: center;
-            top: -100%;
-            left: 0;
-            right: 0;
-            height: 70%;
-            width: 100%;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            background-color: var.$white-fff;
+.registration-btns {
+  display: none;
+}
 
-            a {
-                @include heading(h5);
-                font-size: 24px;
-                font-weight: 700 !important;
-            }
+.hamburger {
+  display: none;
+  text-align: end;
+  border: none;
+  background-color: transparent;
 
-            .nav-item {
-                margin-left: 40px;
-            }
-        }
-    }
-  
-    .nav-left__img{
-        display: flex;
-        gap: 23px;
-        a {
-            display: none;
-        }
-
-        & > img {
-            display: block;
-        }
-    }
-    
-    .hamburger, .close {
-        display: block;
-    }
-
-    .registration-btns {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        margin-top: 70px;
-        
-        button {
-            @include button(13px, 89px, var.$black-0d, 1rem, var.$black-opacity-5, 4px);
-            margin-left: 30px;
-            margin-right: 30px;
-            transition: 0.5s;
-            width: calc(100% - 60px);
-
-            &:hover {
-                background-color: var.$yellow;
-            }
-        }
-        button.register {
-            background-color: var.$yellow;
-        }
-    }
+  & img {
+    width: 23px;
   }
+}
 
+// @keyframes move {
+//   0% {
+//     transform: rotate(0);
+//   }
+//   25% {
+//     transform: rotate(-10deg);
+//   }
+//   50% {
+//     transform: rotate(10deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }
 
+@media (max-width: 1050px) {
+  .nav-left {
+    .nav-items {
+      padding-top: 80px;
+      padding-bottom: 20px;
+      position: fixed;
+      align-items: center;
+      top: -100%;
+      left: 0;
+      right: 0;
+      height: 70%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: var.$white-fff;
 
+      a {
+        @include heading(h5);
+        font-size: 24px;
+        font-weight: 700 !important;
+      }
 
-  @media (max-width: 600px) {
-    .nav-right {
-        button:not(.korzinka) {
-            display: none;
-        }
+      .nav-item {
+        margin-left: 40px;
+      }
     }
   }
 
+  .nav-left__img {
+    display: flex;
+    gap: 23px;
+    a {
+      display: none;
+    }
 
+    & > img {
+      display: block;
+    }
+  }
 
+  .hamburger,
+  .close {
+    display: block;
+  }
 
+  .registration-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 70px;
+
+    button {
+      @include button(
+        13px,
+        89px,
+        var.$black-0d,
+        1rem,
+        var.$black-opacity-5,
+        4px
+      );
+      margin-left: 30px;
+      margin-right: 30px;
+      transition: 0.5s;
+      width: calc(100% - 60px);
+
+      &:hover {
+        background-color: var.$yellow;
+      }
+    }
+    button.register {
+      background-color: var.$yellow;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-right {
+    button:not(.korzinka) {
+      display: none;
+    }
+  }
+}

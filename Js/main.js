@@ -1,11 +1,15 @@
 var button = document.querySelector('.korzinka');
 button.style.animationPlayState = 'running';
 
+let checking = true;
+
 setInterval(function() {
-  button.style.animationPlayState = 'paused';
-  setTimeout(function() {
-    button.style.animationPlayState = 'running';
-  }, 5000);
+    if (checking) {
+        button.style.animationPlayState = 'paused';
+    } else {
+        button.style.animationPlayState = 'running';
+    }
+    checking = !checking;
 }, 5000);
 
 
