@@ -18,17 +18,21 @@
 .home__left {
     cursor: pointer;
     &__main__img {
-        img {
+        video {
             width: 100%;
+            object-fit: cover;
         }
         margin-bottom: 20px;
     }
     &__img {
         display: grid;
+        width: 100%;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 15px;
         img {
             width: 100%;
+            height: 150px;
+            object-fit: cover;
         }
     }
 }
@@ -89,10 +93,17 @@
             font-size: 16px;
             line-height: 24px;
             cursor: pointer;
-            border: 2px solid var.$grey-e5;
+            border: 1px solid var.$grey-e5;
             border-radius: 6px;
             background-color: var.$white-fff;
+            outline: none;
+            box-shadow: inset 0 0 0 0 var.$yellow;
+            transition: all 0.33s ease-in;
         }
+        button:focus {
+            box-shadow: inset 0 0 0 3rem var.$yellow;
+            color: #fff;
+          }
     }
     &__btns {
         margin-bottom: 16px;
@@ -238,16 +249,14 @@
 
 
 // Category
-
 #category {
-    padding-top: 20px;
-    padding-bottom: 60px;
     background-color: var.$grey-e5;
+    padding-bottom: 64px;
 }
 
 .category__title {
     h3 {
-        margin-bottom: 48px;
+        margin-bottom: 24px;
         font-weight: 700;
         font-size: 34px;
         line-height: 140%;
@@ -257,26 +266,49 @@
 
 .category {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 24px;
     &__card {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        cursor: pointer;
         img {
             width: 100%;
-            margin-bottom: 26px;
-            cursor: pointer;
+            height: 100%;
+            object-fit: cover;
         }
         h4 {
+            margin-top: 24px;
             font-weight: 400;
             font-size: 25px;
             line-height: 130%;
             text-align: center;
         }
-    }
+}
 }
 
-.category-responsive {
-    display: none;
+.hover_main {
+    transition: 0.5s;
+    width: 100%;
 }
+.category__card:hover .hover_main {
+    opacity: 0;
+}
+.hover_img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.category__card:hover .hover_img {
+    opacity: 1;       
+}
+
 
 
 
@@ -294,6 +326,9 @@
         &__img {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            img {
+                height: 300px;
+            }
         }
     }
     
@@ -302,6 +337,19 @@
             grid-template-columns: repeat(2, 1fr);
             row-gap: 60px;
         }
+    }
+
+    .category {
+        grid-template-columns: repeat(3, 1fr);
+        &__card {
+            height: 200px;
+        }
+    }
+    .hover_img {
+        display: none;
+    }
+    .category__card:hover .hover_main{
+        opacity: 1;
     }
 }
 
@@ -313,16 +361,7 @@
         }
     }
 
-    // Category
-    .category {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 30px;
-        &__card {
-            h4 {
-                font-size: 16px;
-            }
-        }
-    }
+
 }
 
 @media (max-width: 600px) {
@@ -365,6 +404,16 @@
             }
             &__advantages {
                 grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .category {
+        grid-template-columns: 1fr 1fr;
+        
+        &__card {
+            h4 {
+                font-size: 16px;
             }
         }
     }
@@ -470,21 +519,5 @@
         }
     }
 
-    // Category
-    .category {
-        display: none;
-    }
-    .category-responsive {
-        display: block;
-        .item {
-            img {
-                width: 100%;
-                margin-bottom: 16px;
-            }
-           h4 {
-            font-weight: 600;
-            text-align: center;
-           } 
-        }
-    }
+
 }
